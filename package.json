@@ -1,0 +1,20 @@
+{
+  "name": "GH-7724-node-got-github-responses",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/node": "^7.46.0",
+    "got": "^11.8.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "dotenv": "^16.0.3"
+  },
+  "volta": {
+    "node": "18.15.0"
+  }
+}
