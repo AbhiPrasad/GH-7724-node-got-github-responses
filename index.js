@@ -8,7 +8,16 @@ dotenv.config();
 
 (async () => {
   Sentry.init({
+    debug: true,
     dsn: process.env.SENTRY_DSN,
+    integrations: (int) => {
+      console.log(int);
+      return int.filter((i) => i.name === "Http");
+    },
+    beforeBreadcrumb(breadcrumb) {
+      console.log(breadcrumb);
+      return breadcrumb;
+    },
   });
 
   try {
